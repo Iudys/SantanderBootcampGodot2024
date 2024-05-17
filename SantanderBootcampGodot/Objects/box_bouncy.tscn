@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dijmpvog1appt"]
+
+[ext_resource type="PackedScene" uid="uid://cfahui4wb62wp" path="res://Objects/Player.tscn" id="1_ayutq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2bs1b"]
+bounce = 0.7
+
+[node name="Box Bouncy" instance=ExtResource("1_ayutq")]
+physics_material_override = SubResource("PhysicsMaterial_2bs1b")
+
+[node name="BlockPlayer" parent="." index="1"]
+color = Color(0.342633, 0.495941, 0.899451, 1)

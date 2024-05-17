@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0ymbmq8ytuwn"]
+
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_68ydg"]
+[ext_resource type="PackedScene" uid="uid://cfahui4wb62wp" path="res://Objects/Player.tscn" id="1_bqt4f"]
+[ext_resource type="PackedScene" uid="uid://dijmpvog1appt" path="res://Objects/box_bouncy.tscn" id="2_iait2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wnuf"]
+size = Vector2(1149, 62)
+
+[node name="World" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_68ydg")
+object_templates = Array[PackedScene]([ExtResource("2_iait2"), ExtResource("1_bqt4f")])
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 652.0
+color = Color(0.239216, 0.654902, 0.960784, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(575, 619)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_6wnuf")
+
+[node name="Ground" type="ColorRect" parent="StaticBody2D/CollisionShape2D"]
+offset_left = -573.0
+offset_top = -30.0
+offset_right = 578.0
+offset_bottom = 33.0
+color = Color(0.185941, 0.225884, 0.0173689, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_bqt4f")]
+position = Vector2(565, 89)
+
+[node name="Player2" parent="." instance=ExtResource("1_bqt4f")]
+position = Vector2(820, 89)
+
+[node name="Player3" parent="." instance=ExtResource("1_bqt4f")]
+position = Vector2(182, 54)
+
+[node name="Player4" parent="." instance=ExtResource("1_bqt4f")]
+position = Vector2(381, 54)
+
+[node name="Box Bouncy" parent="." instance=ExtResource("2_iait2")]
+position = Vector2(315, 170)
+
+[node name="Box Bouncy2" parent="." instance=ExtResource("2_iait2")]
+position = Vector2(454, 185)
+
+[node name="Box Bouncy3" parent="." instance=ExtResource("2_iait2")]
+position = Vector2(729, 185)
+
+[node name="Box Bouncy4" parent="." instance=ExtResource("2_iait2")]
+position = Vector2(910, 193)
