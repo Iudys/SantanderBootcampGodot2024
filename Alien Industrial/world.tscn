@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c57pitrn307ql"]
+
+[ext_resource type="TileSet" uid="uid://j41idwp4t67m" path="res://tileset.tres" id="1_ggswd"]
+[ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="2_pihws"]
+[ext_resource type="Texture2D" uid="uid://c12vi7gsdq2t3" path="res://Addons/kenney_alien-ufo-pack/shipYellow_manned.png" id="2_qitx8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47wb3"]
+radius = 7.0
+height = 22.0
+
+[node name="World" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_ggswd")
+format = 2
+layer_0/tile_data = PackedInt32Array(524288, 65536, 0, 524289, 131072, 0, 524290, 131072, 0, 524291, 131072, 0, 524292, 131072, 0, 524293, 131072, 0, 524294, 131072, 0, 524295, 131072, 0, 524296, 131072, 0, 524297, 131072, 0, 524298, 131072, 0, 524299, 262144, 0, 524300, 262144, 0, 524301, 262144, 0, 524302, 262144, 0, 524303, 131072, 0, 524304, 196608, 0, 393223, 327680, 3, 458759, 327680, 3, 262151, 327680, 2, 327687, 327680, 3, 262152, 393216, 3, 262153, 458752, 3, 262154, 524288, 3, 262149, 458752, 3, 262150, 524288, 3, 393222, 851968, 5, 262144, 589824, 6, 262145, 589824, 6, 262146, 589824, 6, 327682, 589824, 6, 327683, 589824, 6, 393219, 589824, 6, 393218, 589824, 6, 458754, 589824, 6, 458753, 589824, 6, 393216, 589824, 6, 327680, 589824, 6, 327681, 589824, 6, 393217, 589824, 6, 458752, 589824, 6, 458755, 589824, 6, 262147, 589824, 6, 262148, 393216, 3, 458763, 393216, 0, 393228, 393216, 0, 327693, 393216, 0, 262158, 393216, 0, 458764, 393216, 1, 393229, 393216, 1, 458765, 262144, 0, 458766, 262144, 0, 393230, 262144, 0, 327694, 393216, 1, 458767, 589824, 3, 458768, 589824, 3)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(829, 461)
+script = ExtResource("2_pihws")
+speed = 5.0
+lerp_factor = 0.075
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_47wb3")
+
+[node name="ShipYellowManned" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.171371, 0.196759)
+texture = ExtResource("2_qitx8")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-246, -130)
