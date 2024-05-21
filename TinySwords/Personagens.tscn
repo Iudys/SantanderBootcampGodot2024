@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://cc6w7u503yrpn"]
+
+[ext_resource type="Texture2D" uid="uid://b6vgd0tgvg3y7" path="res://Addons/Tiny Swords/Factions/Goblins/Troops/Barrel/Blue/Barrel_Blue.png" id="1_cdx7v"]
+[ext_resource type="Texture2D" uid="uid://b0gtyoxluin0g" path="res://Addons/Tiny Swords/Factions/Goblins/Troops/TNT/Blue/TNT_Blue.png" id="2_auf3i"]
+[ext_resource type="Texture2D" uid="uid://dylav0v6nyslh" path="res://Addons/Tiny Swords/Factions/Goblins/Troops/TNT/Dynamite/Dynamite.png" id="3_8oxtv"]
+[ext_resource type="Texture2D" uid="uid://breqgoam7egkk" path="res://Addons/Tiny Swords/Factions/Knights/Troops/Archer/Blue/Archer_Blue.png" id="4_wtnkg"]
+[ext_resource type="Texture2D" uid="uid://c6bdgwf3q1si3" path="res://Addons/Tiny Swords/Factions/Knights/Troops/Dead/Dead.png" id="5_n3h2e"]
+[ext_resource type="Texture2D" uid="uid://80mfuh6m01v2" path="res://Addons/Tiny Swords/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="6_1wv1g"]
+[ext_resource type="Texture2D" uid="uid://dgk4w4nowba7u" path="res://Addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="7_v5y86"]
+
+[node name="Personagens" type="Node2D"]
+
+[node name="BarrelBlue" type="Sprite2D" parent="."]
+position = Vector2(396, 387)
+texture = ExtResource("1_cdx7v")
+
+[node name="TntBlue" type="Sprite2D" parent="."]
+position = Vector2(1494, 301)
+texture = ExtResource("2_auf3i")
+
+[node name="Dynamite" type="Sprite2D" parent="."]
+position = Vector2(221, 834)
+texture = ExtResource("3_8oxtv")
+
+[node name="ArcherBlue" type="Sprite2D" parent="."]
+position = Vector2(791, 1552)
+texture = ExtResource("4_wtnkg")
+
+[node name="Dead" type="Sprite2D" parent="."]
+position = Vector2(437, 2482)
+texture = ExtResource("5_n3h2e")
+
+[node name="PawnBlue" type="Sprite2D" parent="."]
+position = Vector2(2241, 1458)
+texture = ExtResource("6_1wv1g")
+
+[node name="WarriorPurple" type="Sprite2D" parent="."]
+position = Vector2(3485, 802)
+texture = ExtResource("7_v5y86")
