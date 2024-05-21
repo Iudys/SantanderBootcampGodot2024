@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://c57pitrn307ql"]
+[gd_scene load_steps=9 format=3 uid="uid://c57pitrn307ql"]
 
 [ext_resource type="TileSet" uid="uid://j41idwp4t67m" path="res://tileset.tres" id="1_ggswd"]
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="2_pihws"]
 [ext_resource type="Texture2D" uid="uid://c12vi7gsdq2t3" path="res://Addons/kenney_alien-ufo-pack/shipYellow_manned.png" id="2_qitx8"]
+[ext_resource type="Texture2D" uid="uid://bqjr10kcybgqm" path="res://Addons/parallax-industrial-pack/Sprites/bg.png" id="4_g0hc3"]
+[ext_resource type="Texture2D" uid="uid://by52nrq752ig2" path="res://Addons/parallax-industrial-pack/Sprites/buildings.png" id="5_8gust"]
+[ext_resource type="Texture2D" uid="uid://cu1qpeiubtwhh" path="res://Addons/parallax-industrial-pack/Sprites/far-buildings.png" id="6_8qhts"]
+[ext_resource type="Texture2D" uid="uid://ba04p1p4xfkjc" path="res://Addons/parallax-industrial-pack/Sprites/skill-foreground.png" id="7_jp7cx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47wb3"]
 radius = 7.0
@@ -13,10 +17,21 @@ height = 22.0
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_ggswd")
 format = 2
-layer_0/tile_data = PackedInt32Array(524288, 65536, 0, 524289, 131072, 0, 524290, 131072, 0, 524291, 131072, 0, 524292, 131072, 0, 524293, 131072, 0, 524294, 131072, 0, 524295, 131072, 0, 524296, 131072, 0, 524297, 131072, 0, 524298, 131072, 0, 524299, 262144, 0, 524300, 262144, 0, 524301, 262144, 0, 524302, 262144, 0, 524303, 131072, 0, 524304, 196608, 0, 393223, 327680, 3, 458759, 327680, 3, 262151, 327680, 2, 327687, 327680, 3, 262152, 393216, 3, 262153, 458752, 3, 262154, 524288, 3, 262149, 458752, 3, 262150, 524288, 3, 393222, 851968, 5, 262144, 589824, 6, 262145, 589824, 6, 262146, 589824, 6, 327682, 589824, 6, 327683, 589824, 6, 393219, 589824, 6, 393218, 589824, 6, 458754, 589824, 6, 458753, 589824, 6, 393216, 589824, 6, 327680, 589824, 6, 327681, 589824, 6, 393217, 589824, 6, 458752, 589824, 6, 458755, 589824, 6, 262147, 589824, 6, 262148, 393216, 3, 458763, 393216, 0, 393228, 393216, 0, 327693, 393216, 0, 262158, 393216, 0, 458764, 393216, 1, 393229, 393216, 1, 458765, 262144, 0, 458766, 262144, 0, 393230, 262144, 0, 327694, 393216, 1, 458767, 589824, 3, 458768, 589824, 3)
+layer_0/name = "Ground"
+layer_0/z_index = 1
+layer_0/tile_data = PackedInt32Array(524288, 65536, 0, 524289, 131072, 0, 524290, 131072, 0, 524291, 131072, 0, 524292, 131072, 0, 524293, 131072, 0, 524294, 131072, 0, 524295, 131072, 0, 524296, 131072, 0, 524297, 131072, 0, 524298, 131072, 0, 524299, 262144, 0, 524300, 262144, 0, 524301, 262144, 0, 524302, 262144, 0, 524303, 262144, 0, 524304, 262144, 0, 393223, 327680, 3, 458759, 327680, 3, 327687, 327680, 3, 393222, 851968, 5, 458763, 393216, 0, 393228, 393216, 0, 327693, 393216, 0, 262158, 393216, 0, 458764, 393216, 1, 393229, 393216, 1, 458765, 262144, 0, 458766, 262144, 0, 393230, 262144, 0, 327694, 393216, 1, 262159, 196608, 0, 262160, 131072, 0, 327695, 262144, 0, 327696, 262144, 0, 393232, 262144, 0, 458768, 262144, 0, 458767, 262144, 0, 393231, 262144, 0, 458760, 262144, 0, 393224, 262144, 0, 327688, 262144, 0, 262152, 65536, 0, 262153, 65536, 0, 327689, 262144, 0, 393225, 262144, 0, 458761, 262144, 0, 196608, 458752, 1, 196609, 524288, 1, 196610, 458752, 1, 196611, 524288, 1, 196612, 458752, 1, 196613, 524288, 1, 196614, 458752, 1, 327682, 655360, 4, 327685, 655360, 4, 589823, 0, 2, 524287, 0, 2, 458751, 0, 2, 393215, 0, 2, 327679, 0, 2, 262143, 0, 2, -1, 0, 2, -65536, 0, 2, -65535, 0, 2, -65534, 0, 2, -65533, 0, 2, -65532, 0, 2, -65531, 0, 2, -65530, 0, 2, -65529, 0, 2, -65528, 0, 2, -65527, 0, 2, -65526, 0, 2, -65525, 0, 2, -65524, 0, 2, -65523, 0, 2, -65522, 0, 2, -65521, 0, 2, -65520, 0, 2, -65519, 0, 2, 17, 0, 2, 65553, 0, 2, 131089, 0, 2, 196625, 0, 2, 262161, 0, 2, 327697, 0, 2, 393233, 0, 2, 458769, 0, 2, 524305, 0, 2, 65535, 0, 2, 131071, 0, 2, 196607, 0, 2, 458762, 655360, 3, 131079, 851968, 6, 196618, 851968, 7, 131085, 851968, 4)
+layer_1/name = "Wall"
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array(393225, 655360, 5)
+layer_2/name = "background"
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Elements"
+layer_3/z_index = 3
+layer_3/tile_data = PackedInt32Array(0, 589824, 6, 1, 589824, 6, 2, 589824, 6, 3, 589824, 6, 4, 589824, 6, 5, 589824, 6, 6, 589824, 6, 65542, 589824, 6, 131078, 589824, 6, 131077, 589824, 6, 131076, 589824, 6, 131075, 589824, 6, 131074, 589824, 6, 131073, 589824, 6, 131072, 589824, 6, 65536, 589824, 6, 65537, 589824, 6, 65538, 589824, 6, 65539, 589824, 6, 65540, 589824, 6, 65541, 589824, 6, 262154, 720896, 6, 327690, 720896, 6, 393226, 720896, 6, 458762, 720896, 6)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(829, 461)
+z_index = 1
+position = Vector2(527, 318)
 script = ExtResource("2_pihws")
 speed = 5.0
 lerp_factor = 0.075
@@ -25,8 +40,40 @@ lerp_factor = 0.075
 shape = SubResource("CapsuleShape2D_47wb3")
 
 [node name="ShipYellowManned" type="Sprite2D" parent="CharacterBody2D"]
-scale = Vector2(0.171371, 0.196759)
+scale = Vector2(0.386, 0.5)
 texture = ExtResource("2_qitx8")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(-246, -130)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(4.6, 4.6)
+transform = Transform2D(4.6, 0, 0, 4.6, 0, 0)
+
+[node name="BG" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Bg" type="Sprite2D" parent="ParallaxBackground/BG"]
+texture = ExtResource("4_g0hc3")
+centered = false
+
+[node name="builds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="builds" type="Sprite2D" parent="ParallaxBackground/builds"]
+texture = ExtResource("5_8gust")
+centered = false
+
+[node name="farbuilds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="farbuilds" type="Sprite2D" parent="ParallaxBackground/farbuilds"]
+texture = ExtResource("6_8qhts")
+centered = false
+
+[node name="foreground" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, 40.6522)
+motion_scale = Vector2(0.19, 0.19)
+
+[node name="skillforeground" type="Sprite2D" parent="ParallaxBackground/foreground"]
+texture = ExtResource("7_jp7cx")
+centered = false
