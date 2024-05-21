@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbjbv8d1pbdi1"]
+
+[ext_resource type="Texture2D" uid="uid://chbicq1cj5fby" path="res://Addons/Tiny Swords/UI/Buttons/Button_Blue.png" id="1_5a67i"]
+
+[node name="TouchScreenButton2" type="TouchScreenButton"]
+texture_filter = 1
+position = Vector2(85, 513)
+scale = Vector2(0.765625, 0.765626)
+texture_normal = ExtResource("1_5a67i")
+passby_press = true
+action = "move_down"
