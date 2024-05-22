@@ -1,6 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c57pitrn307ql"]
+[gd_scene load_steps=11 format=3 uid="uid://c57pitrn307ql"]
 
+[ext_resource type="Texture2D" uid="uid://dtkb4ecargcuh" path="res://Addons/UI/Buttons/Button_Blue.png" id="1_4fng8"]
 [ext_resource type="TileSet" uid="uid://j41idwp4t67m" path="res://tileset.tres" id="1_ggswd"]
+[ext_resource type="Texture2D" uid="uid://cj3iftchuknaj" path="res://Addons/UI/Buttons/Button_Blue_Pressed.png" id="2_7ts3l"]
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="2_pihws"]
 [ext_resource type="Texture2D" uid="uid://c12vi7gsdq2t3" path="res://Addons/kenney_alien-ufo-pack/shipYellow_manned.png" id="2_qitx8"]
 [ext_resource type="Texture2D" uid="uid://bqjr10kcybgqm" path="res://Addons/parallax-industrial-pack/Sprites/bg.png" id="4_g0hc3"]
@@ -44,6 +46,34 @@ scale = Vector2(0.386, 0.5)
 texture = ExtResource("2_qitx8")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
+z_index = 11
+position = Vector2(-501, 52)
+texture_normal = ExtResource("1_4fng8")
+texture_pressed = ExtResource("2_7ts3l")
+action = "move_up"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
+z_index = 11
+position = Vector2(-501, 146)
+texture_normal = ExtResource("1_4fng8")
+texture_pressed = ExtResource("2_7ts3l")
+action = "move_down"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
+z_index = 11
+position = Vector2(359, 158)
+texture_normal = ExtResource("1_4fng8")
+texture_pressed = ExtResource("2_7ts3l")
+action = "move_left"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
+z_index = 11
+position = Vector2(462, 157)
+texture_normal = ExtResource("1_4fng8")
+texture_pressed = ExtResource("2_7ts3l")
+action = "move_right"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(4.6, 4.6)
