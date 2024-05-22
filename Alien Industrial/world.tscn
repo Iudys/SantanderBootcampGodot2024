@@ -47,34 +47,6 @@ texture = ExtResource("2_qitx8")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-z_index = 11
-position = Vector2(-501, 52)
-texture_normal = ExtResource("1_4fng8")
-texture_pressed = ExtResource("2_7ts3l")
-action = "move_up"
-
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-z_index = 11
-position = Vector2(-501, 146)
-texture_normal = ExtResource("1_4fng8")
-texture_pressed = ExtResource("2_7ts3l")
-action = "move_down"
-
-[node name="TouchScreenButton3" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-z_index = 11
-position = Vector2(359, 158)
-texture_normal = ExtResource("1_4fng8")
-texture_pressed = ExtResource("2_7ts3l")
-action = "move_left"
-
-[node name="TouchScreenButton4" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-z_index = 11
-position = Vector2(462, 157)
-texture_normal = ExtResource("1_4fng8")
-texture_pressed = ExtResource("2_7ts3l")
-action = "move_right"
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(4.6, 4.6)
 transform = Transform2D(4.6, 0, 0, 4.6, 0, 0)
@@ -107,3 +79,40 @@ motion_scale = Vector2(0.19, 0.19)
 [node name="skillforeground" type="Sprite2D" parent="ParallaxBackground/foreground"]
 texture = ExtResource("7_jp7cx")
 centered = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -40.0
+offset_right = 1100.0
+offset_bottom = 632.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control/CanvasLayer"]
+z_index = 11
+position = Vector2(26, 370)
+texture_normal = ExtResource("1_4fng8")
+texture_pressed = ExtResource("2_7ts3l")
+action = "move_up"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Control/CanvasLayer"]
+z_index = 11
+position = Vector2(26, 464)
+texture_normal = ExtResource("1_4fng8")
+texture_pressed = ExtResource("2_7ts3l")
+action = "move_down"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="Control/CanvasLayer"]
+z_index = 11
+position = Vector2(886, 476)
+texture_normal = ExtResource("1_4fng8")
+texture_pressed = ExtResource("2_7ts3l")
+action = "move_left"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="Control/CanvasLayer"]
+z_index = 11
+position = Vector2(989, 475)
+texture_normal = ExtResource("1_4fng8")
+texture_pressed = ExtResource("2_7ts3l")
+action = "move_right"
