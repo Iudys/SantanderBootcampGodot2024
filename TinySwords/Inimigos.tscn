@@ -79,7 +79,7 @@ _data = {
 "direita": SubResource("Animation_7u0wm")
 }
 
-[node name="Node2D" type="CharacterBody2D"]
+[node name="Node2D" type="CharacterBody2D" groups=["enemies"]]
 motion_mode = 1
 script = ExtResource("1_pysjy")
 

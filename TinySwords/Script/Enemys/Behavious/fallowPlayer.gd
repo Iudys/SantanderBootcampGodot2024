@@ -2,7 +2,7 @@ extends Node
 var enemy = Enemy
 
 @onready var sprite: Sprite2D
-@export var speed: float = 3
+@export var speed: float = 0.5
 var inputVector: Vector2
 
 func _ready():
