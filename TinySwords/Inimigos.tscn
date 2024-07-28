@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=3 uid="uid://dho8nq5b2vtje"]
+
+[ext_resource type="Texture2D" uid="uid://80mfuh6m01v2" path="res://Addons/Tiny Swords/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="1_hakam"]
+[ext_resource type="Script" path="res://Script/Enemys/Behavious/fallowPlayer.gd" id="1_ieagy"]
+[ext_resource type="Script" path="res://Script/Enemys/enemy.gd" id="1_pysjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm5jk"]
+size = Vector2(51, 57)
+
+[sub_resource type="Animation" id="Animation_sda8f"]
+resource_name = "Atack"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PawnBlue:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 2), Vector2i(1, 2), Vector2i(2, 2), Vector2i(3, 2), Vector2i(4, 2), Vector2i(5, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_nc3dt"]
+resource_name = "Idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PawnBlue:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jar27"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PawnBlue:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7u0wm"]
+resource_name = "direita"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PawnBlue:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(5, 0), Vector2i(0, 1), Vector2i(1, 1), Vector2i(2, 1), Vector2i(3, 1), Vector2i(4, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_radnp"]
+_data = {
+"Atack": SubResource("Animation_sda8f"),
+"Idle": SubResource("Animation_nc3dt"),
+"RESET": SubResource("Animation_jar27"),
+"direita": SubResource("Animation_7u0wm")
+}
+
+[node name="Node2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_pysjy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2.5)
+shape = SubResource("RectangleShape2D_pm5jk")
+one_way_collision_margin = 2.5
+debug_color = Color(0, 0.6, 0.701961, 1)
+
+[node name="PawnBlue" type="Sprite2D" parent="."]
+texture = ExtResource("1_hakam")
+hframes = 6
+vframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_radnp")
+}
+autoplay = "Idle"
+
+[node name="flwPlayer" type="Node" parent="."]
+script = ExtResource("1_ieagy")

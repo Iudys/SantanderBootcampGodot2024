@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://20p1w67mgtg1"]
 
-[ext_resource type="Script" path="res://Script/player.gd" id="1_02tc4"]
+[ext_resource type="Script" path="res://Script/Player/player.gd" id="1_02tc4"]
 [ext_resource type="Texture2D" uid="uid://dgk4w4nowba7u" path="res://Addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_3skww"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ru4nl"]

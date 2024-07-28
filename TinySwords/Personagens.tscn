@@ -33,8 +33,6 @@ texture = ExtResource("5_n3h2e")
 [node name="PawnBlue" type="Sprite2D" parent="."]
 position = Vector2(2241, 1458)
 texture = ExtResource("6_1wv1g")
-hframes = 6
-vframes = 6
 
 [node name="WarriorPurple" type="Sprite2D" parent="."]
 position = Vector2(3485, 802)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c57pitrn307ql"]
+[gd_scene load_steps=13 format=3 uid="uid://c57pitrn307ql"]
 
 [ext_resource type="Texture2D" uid="uid://dtkb4ecargcuh" path="res://Addons/UI/Buttons/Button_Blue.png" id="1_4fng8"]
 [ext_resource type="TileSet" uid="uid://j41idwp4t67m" path="res://tileset.tres" id="1_ggswd"]
@@ -9,10 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://by52nrq752ig2" path="res://Addons/parallax-industrial-pack/Sprites/buildings.png" id="5_8gust"]
 [ext_resource type="Texture2D" uid="uid://cu1qpeiubtwhh" path="res://Addons/parallax-industrial-pack/Sprites/far-buildings.png" id="6_8qhts"]
 [ext_resource type="Texture2D" uid="uid://ba04p1p4xfkjc" path="res://Addons/parallax-industrial-pack/Sprites/skill-foreground.png" id="7_jp7cx"]
+[ext_resource type="Texture2D" uid="uid://4ecn8woy08vv" path="res://Group 187.png" id="10_sj0va"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47wb3"]
 radius = 7.0
 height = 22.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ylkx"]
+size = Vector2(40, 76)
 
 [node name="World" type="Node2D"]
 
@@ -32,6 +36,7 @@ layer_3/z_index = 3
 layer_3/tile_data = PackedInt32Array(0, 589824, 6, 1, 589824, 6, 2, 589824, 6, 3, 589824, 6, 4, 589824, 6, 5, 589824, 6, 6, 589824, 6, 65542, 589824, 6, 131078, 589824, 6, 131077, 589824, 6, 131076, 589824, 6, 131075, 589824, 6, 131074, 589824, 6, 131073, 589824, 6, 131072, 589824, 6, 65536, 589824, 6, 65537, 589824, 6, 65538, 589824, 6, 65539, 589824, 6, 65540, 589824, 6, 65541, 589824, 6, 262154, 720896, 6, 327690, 720896, 6, 393226, 720896, 6, 458762, 720896, 6)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+visible = false
 z_index = 1
 position = Vector2(527, 318)
 script = ExtResource("2_pihws")
@@ -116,3 +121,16 @@ position = Vector2(989, 475)
 texture_normal = ExtResource("1_4fng8")
 texture_pressed = ExtResource("2_7ts3l")
 action = "move_right"
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+position = Vector2(253, 508)
+script = ExtResource("2_pihws")
+
+[node name="Group187" type="Sprite2D" parent="CharacterBody2D2"]
+scale = Vector2(0.330116, 0.330116)
+texture = ExtResource("10_sj0va")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_1ylkx")

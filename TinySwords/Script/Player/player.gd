@@ -9,9 +9,11 @@ var is_attaking: bool = false
 var attack_cooldown: float = 0.0
 var input_vector2: Vector2 = Vector2(0,0)
 @export var speed: float = 3.0
+@export var damageSword: int = 2
 @export_range(0,1) var lerp_factor: float = 0.075 
 
 func _process(delta:float) -> void:
+	GameManager.playerPosition = position
 	read_input()
 	run_iddle_play_animation()
 	rotate_sprite()

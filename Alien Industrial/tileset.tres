@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://j41idwp4t67m"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://j41idwp4t67m"]
 
 [ext_resource type="Texture2D" uid="uid://dkeq3e17fhcoc" path="res://Addons/kenney_platformer-pack-industrial/platformerPack_industrial_tilesheet.png" id="1_6j5sq"]
+[ext_resource type="Texture2D" uid="uid://d3b2q26qinxs3" path="res://Addons/Group 333.png" id="2_gg5fa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2kisf"]
 texture = ExtResource("1_6j5sq")
@@ -389,7 +390,12 @@ texture_region_size = Vector2i(70, 70)
 13:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 13:7/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vftvp"]
+texture = ExtResource("2_gg5fa")
+texture_region_size = Vector2i(70, 70)
+
 [resource]
 tile_size = Vector2i(70, 70)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2kisf")
+sources/3 = SubResource("TileSetAtlasSource_vftvp")
